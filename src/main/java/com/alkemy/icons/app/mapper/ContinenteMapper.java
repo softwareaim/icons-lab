@@ -12,6 +12,7 @@ public class ContinenteMapper {
 
     public Continente continenteDTO2Entity(ContinenteDTO dto){
         Continente continente = new Continente();
+        continente.setId(dto.getId());
         continente.setImagen(dto.getImagen());
         continente.setDenominacion(dto.getDenominacion());
         return continente;

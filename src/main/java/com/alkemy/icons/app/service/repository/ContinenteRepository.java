@@ -1,4 +1,4 @@
-package com.alkemy.icons.app.repository;
+package com.alkemy.icons.app.service.repository;
 
 import com.alkemy.icons.app.entity.Continente;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -27,4 +27,20 @@ public class ContinenteController {
         ContinenteDTO continenteGuardado = continenteService.save(continente);
         return ResponseEntity.status(HttpStatus.CREATED).body(continenteGuardado);
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<ContinenteDTO> update(@PathVariable Long id,@RequestBody ContinenteDTO dto){
+        ContinenteDTO result = continenteService.update(id, dto);
+        return ResponseEntity.ok().body(result);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<ContinenteDTO> delete(@PathVariable Long id){
+        continenteService.delete(id);
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
+
+
+
+
 }

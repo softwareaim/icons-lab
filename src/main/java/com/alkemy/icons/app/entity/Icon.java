@@ -13,8 +13,8 @@ import java.util.List;
 
 @Entity
 @Table(name = "icon")
-//@SQLDelete(sql = "UPDATE icon SET deleted = true WHERE id=?")
-//@Where(clause = "deleted=false")
+@SQLDelete(sql = "UPDATE icon SET deleted = true WHERE id=?")
+@Where(clause = "deleted=false")
 @Getter
 @Setter
 public class Icon {
@@ -22,7 +22,7 @@ public class Icon {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
-    private String imagen;
+    private String imagen; //url
 
     private String denominacion;
 
